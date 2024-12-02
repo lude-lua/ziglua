@@ -67,44 +67,44 @@ pub fn configure(b: *Build, target: Build.ResolvedTarget, optimize: std.builtin.
 
     lib.linkLibC();
 
-    lib.installHeader(upstream.path("src/lua.h"), "lua.h");
-    lib.installHeader(upstream.path("src/lualib.h"), "lualib.h");
-    lib.installHeader(upstream.path("src/lauxlib.h"), "lauxlib.h");
-    lib.installHeader(upstream.path("src/luaconf.h"), "luaconf.h");
+    lib.installHeader(upstream.path("lua.h"), "lua.h");
+    lib.installHeader(upstream.path("lualib.h"), "lualib.h");
+    lib.installHeader(upstream.path("lauxlib.h"), "lauxlib.h");
+    lib.installHeader(upstream.path("luaconf.h"), "luaconf.h");
 
     return lib;
 }
 
 const lua_base_source_files = [_][]const u8{
-    "src/lapi.c",
-    "src/lcode.c",
-    "src/ldebug.c",
-    "src/ldo.c",
-    "src/ldump.c",
-    "src/lfunc.c",
-    "src/lgc.c",
-    "src/llex.c",
-    "src/lmem.c",
-    "src/lobject.c",
-    "src/lopcodes.c",
-    "src/lparser.c",
-    "src/lstate.c",
-    "src/lstring.c",
-    "src/ltable.c",
-    "src/ltm.c",
-    "src/lundump.c",
-    "src/lvm.c",
-    "src/lzio.c",
-    "src/lauxlib.c",
-    "src/lbaselib.c",
-    "src/ldblib.c",
-    "src/liolib.c",
-    "src/lmathlib.c",
-    "src/loslib.c",
-    "src/ltablib.c",
-    "src/lstrlib.c",
-    "src/loadlib.c",
-    "src/linit.c",
+    "lapi.c",
+    "lcode.c",
+    "ldebug.c",
+    "ldo.c",
+    "ldump.c",
+    "lfunc.c",
+    "lgc.c",
+    "llex.c",
+    "lmem.c",
+    "lobject.c",
+    "lopcodes.c",
+    "lparser.c",
+    "lstate.c",
+    "lstring.c",
+    "ltable.c",
+    "ltm.c",
+    "lundump.c",
+    "lvm.c",
+    "lzio.c",
+    "lauxlib.c",
+    "lbaselib.c",
+    "ldblib.c",
+    "liolib.c",
+    "lmathlib.c",
+    "loslib.c",
+    "ltablib.c",
+    "lstrlib.c",
+    "loadlib.c",
+    "linit.c",
 };
 
 const lua_52_source_files = lua_base_source_files ++ [_][]const u8{
@@ -121,7 +121,7 @@ const lua_53_source_files = lua_base_source_files ++ [_][]const u8{
 };
 
 const lua_54_source_files = lua_base_source_files ++ [_][]const u8{
-    "src/lctype.c",
-    "src/lcorolib.c",
-    "src/lutf8lib.c",
+    "lctype.c",
+    "lcorolib.c",
+    "lutf8lib.c",
 };
